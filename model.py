@@ -21,12 +21,16 @@ num_of_agents = 10
 num_of_iterations = 100
 agents = []
 
-
-
+#environment.append(rowlist)
+#rowlist.append(value)
+rowlist = []
+environment = []
 #distance = [] 
 #f=open("in.txt",delimiter=',')
 #data = csv.reader(f)
-environment = []
+
+
+
 with open("in.txt") as f:
     data = f.read().splitlines() 
 
@@ -40,10 +44,6 @@ with open("in.txt") as f:
                 rowlist.append(int(value))
         environment.append(rowlist)
 
-    
-
-
-
 for line in agents:
     f.write(line)
 #f.close()
@@ -52,30 +52,30 @@ for line in agents:
 # Make the agents.
 for i in range(num_of_agents):
     agents.append(agentframework.Agent(environment))
+    matplotlib.pyplot.scatter(agents[i].x,agents[i].y)
+matplotlib.pyplot.show()
 
 # Move the agents.
 for j in range(num_of_iterations):
     for i in range(num_of_agents):
-
         agents[i].move()
         agents[i].eat()
-        
-matplotlib.pyplot.xlim(0, 99)
-matplotlib.pyplot.ylim(0, 99)
-matplotlib.pyplot.imshow(environment)
-for i in range(num_of_agents):
-    matplotlib.pyplot.scatter(agents[i].x,agents[i].y)
-matplotlib.pyplot.show()
-
+       
 for agents_row_a in agents:
     for agents_row_b in agents:
         distance = distance_between(agents_row_a, agents_row_b)
  
+print("distance: %s" % distance)
 
 
-      
+matplotlib.pyplot.xlim(0, 99)
+matplotlib.pyplot.ylim(0, 99)
 matplotlib.pyplot.imshow(environment)
+
+for i in range(num_of_agents):
+    matplotlib.pyplot.scatter(agents[i].x,agents[i].y)
 matplotlib.pyplot.show()
+
 
 
         
