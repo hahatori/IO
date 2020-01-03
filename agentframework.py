@@ -6,16 +6,14 @@ Created on Thu Nov  7 22:05:27 2019
 @author: toriliang
 """
 import random 
-#import environment
+import matplotlib.pyplot
 
 class Agent():
     def __init__(self, environment):
         self.environment = environment
-        self.store = 0 # We'll come to this in a second.
+        self.store = 0
         self.y = random.randint(0,99)
         self.x = random.randint(0,99)
-        
-    
         
     
     def move(self):
@@ -29,7 +27,16 @@ class Agent():
         else:
             self.y = (self.y - 1) % 100
     
-    def eat(self): # can you make it eat what is left?
+    def eat(self):
         if self.environment[self.y][self.x] > 10:
             self.environment[self.y][self.x] -= 10
-            self.store += 10 
+        self.store += 10 
+            
+a = Agent("environment")
+print(a.y, a.x)
+
+a.move()
+print(a.y, a.x)
+
+matplotlib.pyplot.xlim(0, 99)
+matplotlib.pyplot.ylim(0, 99)
