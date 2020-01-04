@@ -1,11 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Nov  7 21:24:10 2019
-
-@author: tori
-"""
-
 import random
 import operator
 import matplotlib.pyplot as plt
@@ -70,7 +62,7 @@ for agents_row_a in agents:
     for agents_row_b in agents:
         distance = distance_between(agents_row_a, agents_row_b)
          
-
+# Show the scatter dots plot.
 plt.show()
 
         
