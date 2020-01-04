@@ -1,11 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Nov  7 22:05:27 2019
-
-@author: toriliang
-"""
-
 import random 
 import matplotlib.pyplot
 
