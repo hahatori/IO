@@ -1,5 +1,4 @@
 import random 
-import matplotlib.pyplot
 
 # Build the class.
 class Agent(): 
@@ -26,17 +25,20 @@ class Agent():
         if self.environment[self.y][self.x] > 10:
             self.environment[self.y][self.x] -= 10
         self.store += 10 
-        
+    
+    # This method returns a string repersenting that object when we use the print statement.   
+    def __str__(self):
+       return "y= %s, x= %s" % (self.y, self.x)
 
 # Creat objects to test print.           
 a = Agent("environment")
-print(a.y, a.x)
+print(a.move, a.eat) #Locations.
+print("Location:%s" % id(a), a)# Display the location and stores information.
+#print(type(a)) 
 
-a.move()
-print(a.y, a.x)
 
-# Test the frame plot.
-matplotlib.pyplot.xlim(0, 100)
-matplotlib.pyplot.ylim(0, 100)
+
+
+
 
 
