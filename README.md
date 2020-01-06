@@ -1,6 +1,6 @@
 # I/O
 
-This project including [in.txt](https://github.com/hahatori/IO/blob/master/in.txt), [agentframework.py](https://github.com/hahatori/Agents/blob/master/agentframework.py) and [model.py](https://github.com/hahatori/Agents/blob/master/model.py).
+This project including [in.txt](https://github.com/hahatori/IO/blob/master/in.txt), [agentframework.py](https://github.com/hahatori/IO/blob/master/agentframework.py) and [model.py](https://github.com/hahatori/IO/blob/master/model.py).
 
 ## Contents
 
@@ -13,9 +13,11 @@ This project including [in.txt](https://github.com/hahatori/IO/blob/master/in.tx
 
 ### The key elements:
 
-[in.txt]() is a text file with raster data.
-[Agent]() code can build agents to interact.
-[Model]() code can creat models for connecting developers and users.
+**in.txt** is a text file with raster data.
+
+**Agent** code can build agents to interact.
+
+**Model** code can creat models for connecting developers and users.
 
 ### 
 
