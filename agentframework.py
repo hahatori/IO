@@ -36,8 +36,7 @@ class Agent():
 
 # Creat objects to test print.           
 a = Agent("environment")
-
-print(a.move, a.eat) #Locations.
+print(a.move, a.eat) # Output locations.
 print("Location:%s" % id(a), a)# Display the location and stores information.
 #print(type(a)) 
 
