@@ -5,8 +5,8 @@ This project including [in.txt](https://github.com/hahatori/IO/blob/master/in.tx
 ## Contents
 
 - [Details](#details)
-- [Theoretical Results](#theoretical_result)
-- [Actual Results](#actual_result)
+- [Theoretical Results](#theoretical-results)
+- [Actual Results](#actual-results)
 - [Issues](#issues)
 
 ## Details
@@ -40,7 +40,6 @@ $ import random
 
   class Agent(): 
 
-      # # Define the initialization method.
       def __init__(self, environment):  
           self.environment = environment 
           self.store = 0
@@ -79,16 +78,24 @@ $ <bound method Agent.move of <__main__.Agent object at 0x117326a10>> <bound met
   Location:4684147216 y= 15, x= 36
 ```
 
-Error:
+### Matplotlib
+
+**Matplotlib** is a Python 2D drawing library that generates graphics in a variety of hardcopy formats and cross-platform interactive environments. With Matplotlib, developers can generate graphs, histograms, power spectra, bar charts, error graphs, scatter plots, etc. in just a few lines of code.
 
 ```sh
-$ random.randint(20, 12)
+$ import matplotlib.pyplot as plt 
+
+  plt.xlim(0, 100)          
+  plt.ylim(0, 100) 
+  plt.show()
 ```
-### 
+Output
+
+![Matplotlib frame](https://github.com/hahatori/Python_Assignment1/blob/master/Matplotlib.png)
 
 ## Theoretical Results
 
-Expect to move random coordinate points and calculate the distance between two sets of them, then show the 10 points in a scatter plot with x and y axes of 0 to 99. 
+Expect model to import the in.txt file and call the agent, the agent moves random coordinate points and calculates the distance between two sets of them, then the model displays an image on the axes, and the 10 points are randomly distributed over the images. 
 
 ## Actual Results
 
