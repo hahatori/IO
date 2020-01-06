@@ -66,8 +66,8 @@ $ import random
          return "y= %s, x= %s" % (self.y, self.x)
           
   a = Agent("environment")
-  
-  print(a.move, a.eat) #Locations.
+  print(a)
+  print(a.move, a.eat)
   print("Location:%s" % id(a), a)
 ```
 
@@ -75,6 +75,7 @@ Output:
 
 ```sh
 $ <bound method Agent.move of <__main__.Agent object at 0x117326a10>> <bound method Agent.eat of <__main__.Agent object at 0x117326a10>>
+  y= 15, x= 36
   Location:4684147216 y= 15, x= 36
 ```
 
@@ -89,7 +90,7 @@ $ import matplotlib.pyplot as plt
   plt.ylim(0, 100) 
   plt.show()
 ```
-Output
+Output:
 
 ![Matplotlib frame](https://github.com/hahatori/Python_Assignment1/blob/master/Matplotlib.png)
 
@@ -103,11 +104,11 @@ Expect model to import the in.txt file and call the agent, the agent moves rando
 
 ## Issues
 
-1. Agents can only eat 10 units at a time. If there are less than 10 left, can they eat the last few without leaving a negative value?
+1. ```__init__(self, environment):``` is a initialization method and it creates a formal parameter called **environment**. When creating a new instance of the class, we do not explicitly call the __init__ method, but pass the arguments in the parentheses following the class name. environment is a mutable object,and the variable passes in the object, all the Agents link to the same environment object. So when the Agents changes the environment data, it changes for all agents.
 
-2. The question of by finding the size of the agent's internal environment and using the size when randomly assigning their starting positions and working with boundary conditions, the agent can wander through the environment.
+2. ```__str__(self):``` can return object and description property information, will be automatically called. ```str()``` built-in function uses ```__str__``` to display the string of the object.
 
-3. If the agent has greedy guts and eats more than 100 units, can you get the agents to sick up their store in a location?
-
+3. The question of by finding the size of the agent's internal environment and using the size when randomly assigning their starting positions and working with boundary conditions, the agent can wander through the environment.
+ 
 
 
