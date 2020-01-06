@@ -45,7 +45,7 @@ Expect to move random coordinate points and calculate the distance between two s
 
 ## Actual Results
 
-![Scatter Plot](https://github.com/hahatori/Python_Assignment1/blob/master/AgentPlot.png)
+![Scatter Dots Plot](https://github.com/hahatori/Python_Assignment1/blob/master/IO.png)
 
 ## Issues
 
