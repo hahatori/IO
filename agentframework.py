@@ -4,7 +4,7 @@ import random
 # Build the Agent class.
 class Agent(): 
     
-    # # Define the initialization method.
+    # Define the initialization method.
     def __init__(self, environment):  # The first argument of __init__ is always self, environment is formal parameter.
         self.environment = environment # Pass the environment list to the Agent's constructor.
         self.store = 0
@@ -36,6 +36,7 @@ class Agent():
 
 # Creat objects to test print.           
 a = Agent("environment")
+
 print(a.move, a.eat) #Locations.
 print("Location:%s" % id(a), a)# Display the location and stores information.
 #print(type(a)) 
