@@ -1,5 +1,5 @@
 # I/O
-
+(Input/Output)
 This project including [in.txt](https://github.com/hahatori/IO/blob/master/in.txt), [agentframework.py](https://github.com/hahatori/IO/blob/master/agentframework.py) and [model.py](https://github.com/hahatori/IO/blob/master/model.py).
 
 ## Contents
@@ -19,18 +19,64 @@ This project including [in.txt](https://github.com/hahatori/IO/blob/master/in.tx
 
 **Model** code can creat models for connecting developers and users.
 
-### 
+### OOP (Object Oriented Programming)
 
-It generates a random number of characters from 0 to 1 (0 <= n < 1.0):
+**Creat Class, Object and Method**
 
 ```sh
-$ random.random()
+$ class Agent:   # Creat "Agent" class.    
+      def eat(self): # Define "eat" method.
+      pass    #An empty block.
+      
+  a = Agent() #Creat a object.
+  a.eat()
+  print a
 ```
 
-It generates a random number n (12 <= n <= 20):
+**agentframework.py** :
 
 ```sh
-$ random.randint(12, 20)
+$ import random 
+
+  class Agent(): 
+
+      # # Define the initialization method.
+      def __init__(self, environment):  
+          self.environment = environment 
+          self.store = 0
+          self.y = random.randint(0,99) 
+          self.x = random.randint(0,99) 
+
+      def move(self):
+          if random.random() < 0.5:
+              self.x = (self.x + 1) % 100
+          else:
+              self.x = (self.x - 1) % 100
+
+          if random.random() < 0.5:
+              self.y = (self.y + 1) % 100
+          else:
+              self.y = (self.y - 1) % 100
+
+      def eat(self):
+          if self.environment[self.y][self.x] > 10:
+              self.environment[self.y][self.x] -= 10
+          self.store += 10 
+
+      def __str__(self):
+         return "y= %s, x= %s" % (self.y, self.x)
+          
+  a = Agent("environment")
+  
+  print(a.move, a.eat) #Locations.
+  print("Location:%s" % id(a), a)
+```
+
+Output:
+
+```sh
+$ <bound method Agent.move of <__main__.Agent object at 0x117326a10>> <bound method Agent.eat of <__main__.Agent object at 0x117326a10>>
+  Location:4684147216 y= 15, x= 36
 ```
 
 Error:
@@ -38,6 +84,7 @@ Error:
 ```sh
 $ random.randint(20, 12)
 ```
+### 
 
 ## Theoretical Results
 
